@@ -1,14 +1,10 @@
 # Wagwan, welcome to my cyber crib
 
-You've just clicked into the most advanced repo on GitHub — my personal site's repo. It's where my tech skills vibe with my life stories, creating a rad web hangout that's all about staying lit and keeping real.
+You've just clicked into the most advanced repo on GitHub.
 
 ## What's Poppin' 🚀
 
-- **Pixel Paradise**: Step into my pixel party — where art meets code, and every scroll is a visual jam.
-- **Tech Alchemy**: Built with tomorrow in mind, my site's flexing with scalable tech that grows with my journey.
-- **Anywhere, Any Screen**: Whether you're on a phone or behind a desk, my site's rocking it on every device. #ResponsiveAF
-- **Google's Homie**: SEO? More like CEO of getting noticed. I play nice with search engine giants.
-- **#InclusionIsKey**: Digital doors open for all. Accessibility's not just cool, it's crucial.
+- **Nothing Yet**: Nothing crazy is happening yet
 
 ## Tech Stack Breakdown 💻
 
