@@ -22,7 +22,7 @@ Wanna dive into the backstage? Get my digital domain running on your turf:
 
 Clone this digital masterpiece:
 
-git clone https://github.com/cwachong/cyruswach.ong.git
+git clone https://github.com/cwachong/wackyWebsite.git
 
 
 ## Any add-ons? 🎧
