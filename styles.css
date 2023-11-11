@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Adds smooth scrolling */
+}
+
+.section {
+    height: 100vh; /* Sets the height of each section to be 100% of the viewport height */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+#background-section {
+    background-color: #f4f4f4;
+}
+
+#links-section {
+    background-color: #e0e0e0;
+}
+
+.section h1, .section h2 {
+    margin: 0 0 20px 0;
+}
+
+.section a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.section a:hover {
+    background-color: #367c39;
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    opacity: 0; /* Initially hide sections */
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Text animation */
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.text-animate {
+    opacity: 0; /* Initially hide text */
+    animation: fadeInText 1s ease forwards;
+}
