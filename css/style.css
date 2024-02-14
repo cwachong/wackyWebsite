@@ -1,6 +1,13 @@
 :root {
     --primary-color: #e50914;
     --dark-color: #141414;
+    --blue-color: #35a7ff;
+    --green-color: #6BF178;
+    --white-color: #FFFFFF;
+    --pink-color: #FF5964;
+    --yellow-color: #FFE74C;
+
+
 }
 
 * {
@@ -44,7 +51,7 @@ img {
     width: 100;
     height: 100vh;
     position: relative;
-    background: url('../img/background.jpg') no-repeat center center/cover;
+    background: url('../img/untitled1.png') no-repeat center center/cover;
 }
 
 .showcase::after {
@@ -55,14 +62,14 @@ img {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.6);
-    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+    background: rgba(213, 180, 12, 0.1);
+    box-shadow: inset 10px 10px 10px var(--yellow-color), inset -10px -10px 10px var(--yellow-color);
 }
 
 .showcase-top {
     position: relative;
     z-index: 2;
-    height: 90px;
+    height: 400px;
 }
 
 .showcase-top img {
@@ -97,6 +104,9 @@ img {
     font-size: 5.2rem;
     line-height: 1.1;
     margin: 0 0 2rem;
+    -webkit-text-stroke-width: 0.1rem;
+    -webkit-text-stroke-color: #35a7ff;
+    color: var(--green-color);
 }
 
 .showcase-content p {
@@ -110,7 +120,7 @@ img {
 
 /* Tabs */
 .tabs {
-    background: var(--dark-color);
+    background: var(--white-color);
     padding-top: 1rem;
     border-bottom: 3px solid #3d3d3d;
 }
@@ -134,7 +144,7 @@ img {
 }
 
 .tabs .container>div:hover {
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 
@@ -145,7 +155,7 @@ img {
 /* Tab Content */
 .tab-content {
     padding: 3rem 0;
-    background: #000;
+    background: var(--white-color);
     color: #fff;
 }
 
@@ -274,21 +284,24 @@ img {
 /* Buttons */
 .btn {
     display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
+    /* background: var(--blue-color); */
+    color: var(--green-color);
     padding: 0.4rem 1.3rem;
     font-size: 1rem;
     text-align: center;
     border: none;
     cursor: pointer;
     margin-right: 0.5rem;
-    outline: none;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-    border-radius: 2px;
+    /* outline: none; */
+    /* box-shadow: 0 1px 0 rgba(3, 185, 241, 0.904);
+    border-radius: 2px; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #35a7ff;
+    /* opacity: 0.7; */
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.4;
 }
 
 .btn-rounded {
