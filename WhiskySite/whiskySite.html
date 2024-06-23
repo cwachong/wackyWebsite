@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhiskyRater</title>
     <link rel="stylesheet" href="whisky-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1"></script>
+    <script type="module" src="supabaseClient.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,7 +27,7 @@
                 unique alias.
             </p>
         </div>
-        <div class="section" id="whisky-section">
+        <div class="section" id="review-section">
             <h1><u>Whisky Rating Scale:</u></h1>
             <ul>
                 <li>0: Horrible, worst thing I've ever drank</li>
@@ -41,56 +43,26 @@
                 <li>10: Unicorn, nothing should ever reach this level</li>    
             </ul>
             <h1><u>Whisk(e)y Reviews:</u></h1>
-            <h2>Cyrus' Reviews</h2>
-            <h3><u>Redbreast</u> 12 Year</h3>
-            <p>
-                <b>Colour:</b> Quite Dark for a 12 year, I'd be curious if there's colouring added. 
-                The colour of apple juice from concentrate.
-            </p><br>
-            <p>
-                <b>Nose:</b> heavy heavy sherry influence. Smelled differently in the boston round, 
-                but in the glencairn I get dark fruits, raisins, figs, prunes etc. There are also 
-                notes of chocolate, and some lighter fruit notes, such as older red delicious apples, 
-                when they become crumbly.
-            </p><br>
-            <p>
-                <b>Palate:</b> WOW, That is intense sherry. I get a slight difference from  scotch, 
-                but this is quite unlike the cheaper Irish whiskies I've tried. There is a slight 
-                ethanol bite initially, but throughout that sip you get raisins and fruit from the 
-                start all the way to the end. This whisky definitely warms you up, and drinks well 
-                for its ABV. Quite full mouthfeel, but the malty notes do pair very well with the sherry notes.
-            </p><br>
-            <p>
-                <b>Finish:</b> The heavier mouthfeel does carry over, and the whisky itself finishes 
-                with a decent ethanol bite. Those sherry notes stay, with the raisin notes really hitting 
-                at the back of the tongue, absolutely caressing and serenading my olfactory system. Once 
-                those sherry notes, it ends with a very familiar malty note, as I get when I drink scotch. 
-            </p><br>
-            <p>
-                <b>Final:</b> Wow does this whisky drink above its price range, super full mouth feel, 
-                delicious and complex sherry notes leave, and holds its weight at ABV making hold its 
-                weight without being a pushover. Overall incredibly impressed, and this tempts me to 
-                get into the world of irish whisky. This follows what I expected to be the archetypal 
-                Irish whisky, but with a ton more sherry.
-            </p><br>
-            <p>
-                <b>Score:</b> 6.5/10
-            </p><br>
+            <div id="reviews"></div>
         </div>
         <!-- Submission form for whisky reviews, this should get pushed to Supabase API -->
         <h1>&#128679;&#128119;Review Submission Form: UNDER CONSTRUCTION&#128119;&#128679;</h1>
-        <form>
+        <form id="review-form">
             <label for="distillery">Distillery:</label><br>
             <input type="text" placeholder="E.g. Ardbeg" 
             size= 40 id="distillery" name="distillery"><br>
 
-            <label for="bottle-name">Bottle Name:</label><br>
+            <label for="bottle_name">Bottle Name:</label><br>
             <input type="text" placeholder="E.g. 12 year" 
-            size= 40 id="bottle-name" name="bottle-name"><br>
+            size= 40 id="bottle_name" name="bottle_name"><br>
 
             <label for="colour">Colour:</label><br>
             <textarea id="colour" name="colour" rows="2" cols="50" 
             placeholder="Basic notes on the colour of the whisky"></textarea><br>
+
+            <label for="nose">Nose:</label><br>
+            <textarea id="nose" name="nose" rows="2" cols="50" 
+            placeholder="Basic notes on the smell of the whisky"></textarea><br>
 
             <label for="palate">Palate:</label><br>
             <textarea id="palate" name="palate" rows="4" cols="50" 
