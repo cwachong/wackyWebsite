@@ -57,7 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Reviews fetched:', data);
                 const formattedData = data.map(review => ({
                     ...review,
-                    text: capitalizeSentences(review.text)
+                    distillery: capitalizeSentences(review.distillery),
+                    bottle_name: capitalizeSentences(review.bottle_name),
+                    colour: capitalizeSentences(review.colour),
+                    nose: capitalizeSentences(review.nose),
+                    palate: capitalizeSentences(review.palate),
+                    finish: capitalizeSentences(review.finish),
+                    final: capitalizeSentences(review.final)
                 }));
                 displayReviews(formattedData); // Display fetched reviews on the webpage
             }
@@ -93,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function capitalizeSentences(text) {
+        if (!text) return '';
         return text.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, char => char.toUpperCase());
     }
 
