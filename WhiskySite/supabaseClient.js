@@ -55,7 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error fetching reviews:', error.message);
             } else {
                 console.log('Reviews fetched:', data);
-                displayReviews(data); // Display fetched reviews on the webpage
+                const formattedData = data.map(review => ({
+                    ...review,
+                    text: capitalizeSentences(review.text)
+                }));
+                displayReviews(formattedData); // Display fetched reviews on the webpage
             }
         } catch (error) {
             console.error('Error fetching reviews:', error.message);
@@ -86,6 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             reviewSection.appendChild(reviewDiv);
         });
+    }
+
+    function capitalizeSentences(text) {
+        return text.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, char => char.toUpperCase());
     }
 
     // Event listener for the review form submission
