@@ -125,5 +125,11 @@ import {
   
       // Fetch and display reviews when the page loads
       getReviews();
+
+      async function signInWithDiscord() {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+          provider: 'discord',
+        })
+      }
   });
   
