@@ -39,11 +39,44 @@
                 <li>It's a fun way to gamify productivity</li>
             </ul>
         </section>
+
+        <section id="procrastipay-calculator">
+            <h3>ProcrastiPay Calculator</h3>
+            <div class="calculator-container">
+                <div class="calculator-row header">
+                    <span>Task Name</span>
+                    <span>Hourly Wage ($)</span>
+                    <span>Hours Worked</span>
+                    <span>Total Earned ($)</span>
+                </div>
+                <div class="calculator-row">
+                    <input type="text" id="task1-name" placeholder="Task 1">
+                    <input type="number" id="task1-wage" min="0" step="0.01" placeholder="0.00">
+                    <input type="number" id="task1-hours" min="0" step="0.25" placeholder="0.00">
+                    <span id="task1-total">$0.00</span>
+                </div>
+                <div class="calculator-row">
+                    <input type="text" id="task2-name" placeholder="Task 2">
+                    <input type="number" id="task2-wage" min="0" step="0.01" placeholder="0.00">
+                    <input type="number" id="task2-hours" min="0" step="0.25" placeholder="0.00">
+                    <span id="task2-total">$0.00</span>
+                </div>
+                <div class="calculator-row">
+                    <input type="text" id="task3-name" placeholder="Task 3">
+                    <input type="number" id="task3-wage" min="0" step="0.01" placeholder="0.00">
+                    <input type="number" id="task3-hours" min="0" step="0.25" placeholder="0.00">
+                    <span id="task3-total">$0.00</span>
+                </div>
+                <div class="calculator-row total">
+                    <span>Total Earned:</span>
+                    <span id="total-earned">$0.00</span>
+                </div>
+            </div>
+        </section>
     </main>
-    
+    <script src="procrastiPay.js"></script>
     <footer>
         <p>&copy; 2024 Cyrus WaChong</p>
     </footer>
 </body>
 </html>
-
